@@ -1,0 +1,286 @@
+* , *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #a0a0a0;
+}
+
+body {
+    background: linear-gradient(to right bottom , rgba(0, 0, 0, 0.849), #52ccebc7);
+}
+
+/*Header*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px 30px;
+    background-color: rgb(5, 4, 4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 10000;
+}
+
+.logo {
+    cursor: pointer;
+    color: #f1f1f1 !important;
+    font-weight: 800 !important;
+    font-size: 24px;
+}
+
+.nav-items li{
+    position: relative;
+    display: inline-block;
+    padding: 0 25px;
+}
+
+.nav-items a {
+    position: relative;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+
+.nav-items a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #ff3c78;
+    bottom: -6px;
+    left: 0;
+    transition: all 0.7s ease;
+}
+
+.nav-items a:hover {
+    color: #f1f1f1;
+}
+
+.nav-items a:hover::after {
+    width: 100%;
+}
+
+.search button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: #52cceb;
+    color: black;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: rgb(67, 235, 247);
+}
+
+.nav-items-dropdown__menu {
+    display: none;
+}
+
+.nav ul li:hover .nav-items-dropdown__menu {
+    display: block;
+    position: absolute;
+    background-color: rgb(5, 4, 4);
+    left: 0;
+    top: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.nav ul li:hover .nav-items-dropdown__menu ul {
+    display: block;
+    margin: 12px;
+}
+
+.nav ul li:hover .nav-items-dropdown__menu ul li {
+    padding: 12px;
+}
+
+/* Slider */
+
+.slider {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    
+}
+
+.slider-main {
+    height: 500px;
+    width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Navigation manual */
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 30px;
+}
+
+.manual-btn:hover {
+    background-color: black;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+
+/* Navigation auto*/
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 480px;
+}
+
+.navigation-auto div {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 30px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: black;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: black;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: black;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background: black;
+}
+
+/*Introduce products*/
+
+.introduce {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.introduce img {
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.introduce h1 {
+    color: #f1f1f1;
+    text-align: center;
+    padding: 0 100px;
+    padding-bottom: 200px;
+}
+
+.introduce-tshirt {
+    padding: 20px 0;
+    margin: 100px 10px;
+    display: flex;
+    height: 300px;
+    width: 40%;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:576px) {
+    .introduce {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+}
+
+.footer h1 {
+    color: black;
+}
